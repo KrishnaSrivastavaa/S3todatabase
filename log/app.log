@@ -1,0 +1,68 @@
+INFO:root:Uploaded data/input.csv to S3 as data/your-input.csv
+ERROR:root:Error fetching data/your-input.csv from S3: [Errno 2] No such file or directory: 'data/temp\\your-input.csv.eA1433bb'
+ERROR:root:Error cleaning data/temp/your-input.csv: [Errno 2] No such file or directory: 'data/temp/your-input.csv'
+ERROR:root:Error inserting data into PostgreSQL: [Errno 2] No such file or directory: 'data/temp/cleaned-data.csv'
+INFO:root:Uploaded data/input.csv to S3 as data/your-input.csv
+INFO:root:Fetched data/your-input.csv from S3 to data/temp\your-input.csv
+INFO:root:Cleaned data/temp\your-input.csv and saved as data/temp\cleaned-data.csv
+ERROR:root:Error inserting data into PostgreSQL: relation "your_table" does not exist
+
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/your-input.csv
+INFO:root:Fetched data/your-input.csv from S3 to data/temp\your-input.csv
+INFO:root:Cleaned data/temp\your-input.csv and saved as data/temp\cleaned-data.csv
+ERROR:root:Error inserting data into PostgreSQL: date/time field value out of range: "15-01-22"
+HINT:  Perhaps you need a different "datestyle" setting.
+CONTEXT:  COPY your_table, line 2, column Join Date: "15-01-22"
+
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/your-input.csv
+INFO:root:Fetched data/your-input.csv from S3 to data/temp\your-input.csv
+INFO:root:Cleaned data/temp\your-input.csv and saved as data/temp\cleaned-data.csv
+ERROR:root:Error inserting data into PostgreSQL: date/time field value out of range: "15-01-22"
+HINT:  Perhaps you need a different "datestyle" setting.
+CONTEXT:  COPY your_table, line 2, column Join Date: "15-01-22"
+
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/your-input.csv
+INFO:root:Fetched data/your-input.csv from S3 to data/temp\your-input.csv
+INFO:root:Cleaned data/temp\your-input.csv and saved as data/temp\cleaned-data.csv
+ERROR:root:Error inserting data into PostgreSQL: syntax error at or near "DATEFORMAT"
+LINE 3:                 DATEFORMAT 'DD-MM-YY'
+                        ^
+
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/your-input.csv
+INFO:root:Fetched data/your-input.csv from S3 to data/temp\your-input.csv
+INFO:root:Preprocessed data/temp\your-input.csv and saved as data/temp\preprocessed-data.csv
+INFO:root:Data inserted into PostgreSQL successfully
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/user_data_uncleaned.csv
+ERROR:root:Error uploading data/temp\preprocessed_user_data.csv to S3: [WinError 2] The system cannot find the file specified: 'data/temp\\preprocessed_user_data.csv'
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/user_data_uncleaned.csv
+ERROR:root:Error preprocessing data/input.csv: 'join_date'
+ERROR:root:Error uploading data/temp\preprocessed_user_data.csv to S3: [WinError 2] The system cannot find the file specified: 'data/temp\\preprocessed_user_data.csv'
+ERROR:root:Error inserting data into PostgreSQL: [Errno 2] No such file or directory: 'data/temp\\preprocessed_user_data.csv'
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/user_data_uncleaned.csv
+ERROR:root:Error preprocessing data/input.csv: 'join_date'
+ERROR:root:Error uploading data/temp\preprocessed_user_data.csv to S3: [WinError 2] The system cannot find the file specified: 'data/temp\\preprocessed_user_data.csv'
+ERROR:root:Error inserting data into PostgreSQL: [Errno 2] No such file or directory: 'data/temp\\preprocessed_user_data.csv'
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/user_data_uncleaned.csv
+ERROR:root:Error preprocessing data/input.csv: 'join_date'
+ERROR:root:Error uploading data/temp\preprocessed_user_data.csv to S3: [WinError 2] The system cannot find the file specified: 'data/temp\\preprocessed_user_data.csv'
+ERROR:root:Error inserting data into PostgreSQL: [Errno 2] No such file or directory: 'data/temp\\preprocessed_user_data.csv'
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/your-input-uncleaned.csv
+INFO:root:Fetched data/your-input-uncleaned.csv from S3 to data/temp\your-input.csv
+INFO:root:Preprocessed data/temp\your-input.csv and saved as data/temp\preprocessed-data.csv
+INFO:root:Uploaded data/temp\preprocessed-data.csv to S3 as data/your-input-cleaned.csv
+INFO:root:Data inserted into PostgreSQL successfully
+INFO:root:Table created or already exists in PostgreSQL
+INFO:root:Uploaded data/input.csv to S3 as data/your-input-uncleaned.csv
+INFO:root:Fetched data/your-input-uncleaned.csv from S3 to data/temp\your-input.csv
+INFO:root:Preprocessed data/temp\your-input.csv and saved as data/temp\preprocessed-data.csv
+INFO:root:Uploaded data/temp\preprocessed-data.csv to S3 as data/your-input-cleaned.csv
+INFO:root:Data inserted into PostgreSQL successfully
